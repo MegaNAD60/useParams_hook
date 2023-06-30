@@ -5,13 +5,13 @@ It's important to have basic knowledge on React routing and JavaScript tools suc
 ## **What is useParams Hook?**
 The useParams hook is a React router hook that enables navigating and dynamic render of contents with multiple paths. Ecommerce and Blog apps are example of React applications with multiple paths that require implementing useParams hook. For instance, a blog app contains many blogs with a unique id, which will be used to retrieve and render blog details.
 ## **Benefit of useParams Hook**
-* **Less codes:** The useParams hook align with the **Don't Repeat Yourself** (DRY) principle of React framework. With useParams hook, we don't have to write codes for all path. We only need to create a unique id, retrieve and render its content.
-* **Quick production:** When less codes are written, we finish our project as quick as possibles.
-* **Saves time:** useParams enables easy coding which saves time and energy both in writng codes and reading to understand codes
-* **Accuracy:** The useParams hook avoids the burden of writing unending codes for multiple path, with less codes getting the accurate data.
-* **Clean codes:** Implmenting useParams hook makes your codes understandable and maintainable.
+* **Fewer codes:** The useParams hook aligns with the **Don't Repeat Yourself (DRY)** principle of programming. With useParams hook, we don't have to write codes repeatedly but rather retrieve and render contents based on its parameters.
+* **Quick production:** Using hooks and tools such as useParams hook to write fewer codes help us finish projects quickly which in turn saves time and energy.
+* **Codes reusability:** The useParams hook enable reusability of codes as for multiple parameters which reduces time and resources in developing software.
+* **Accuracy:** The useParams hook retrieve and render contents of its parameters correctly without any mistakes.
+* **Clean codes:** The useParams hook makes your codes understandable and maintainable.
 ## **Steps in applying useParams hook in React applications.**
-In this section, we shall be building an ecoomerce page that display products, whereby each product details will be retrieve and render. Let’s get started.
+In this section, we shall be building a simple ecommerce page that display products, whereby each product details will be retrieve and render. Let’s get started.
 ### **Assumption**
 This section will assume that you have setup your react app with necessary routings. If you have not, check out this [**Link**](/https://medium.com/@nehemiahdauda60/routing-in-react-applications-96340f2b07d5.) to setup your React application including installing React-router-dom. Also to note, the above link will serve as reference as we start building this app.
 
@@ -25,7 +25,7 @@ Firstly, lets creates an image folder in src directory. Insert all necessary ima
 </Routes>
 ```
 The created route path has a placeholder as **id** in front colon. What the placeholder does is that react router will dynamically match the route to a url that matches /product/:id pattern in its path. For instance, if a url path takes in an id of 1, the url path will be product/1.
-* Next Creates Product.js file in components folder, containing products informations in an array. Each product should have a unique Id that represent our parameters. Codes below
+* Next Creates Product.js file in components folder, containing products information in an array. Each product should have a unique Id that  represents our parameters. Codes below
 ```
 const Products = [
     {
@@ -79,7 +79,7 @@ const Card = () => {
 
 export default Card;
 ```
-In the above codes, map function was used to iterates through products which was imported from Products.js file. We also destruture our products object and save it to store. Note also we have a Link element that points to a url using using backtick ( **`** ) and template literals ( **${}** ).
+In the above codes, map function was used to iterates through products which was imported from Products.js file. We also destruture our products object and save it to store. Note also we have a Link element that points to a url using backtick ( **`** ) and template literals ( **${}** ).
 * In Home.js file in pages folder, import and render Card.js as seen in the codes below. (reference from [**React routing tutorial**](/https://medium.com/@nehemiahdauda60/routing-in-react-applications-96340f2b07d5.) )
 ```
 import Card from "../components/Card"
@@ -102,7 +102,7 @@ export default Home;
 import { useParams } from "react-router-dom";
 import Products from "../components/Products";
 
-const StoreDetails = () => {
+const ProductDetails = () => {
     let { id } = useParams();
     const productDetails = Products.find(productDetails => String(productDetails.id) === id);
 
@@ -119,10 +119,10 @@ const StoreDetails = () => {
     )
 }
 
-export default StoreDetails;
+export default ProductDetails;
 ```
 We firstly destructure our id and assign it to useParams function. Next, the find method assign to productDetails is use to match the id to and retrieve its content, which can further be render.
-* Style your components in index.css file. i gave mine some little styling.
+* Style your components in index.css file. I gave mine some little styling.
 ```
 .card-section{
   display: grid;
@@ -145,4 +145,4 @@ We firstly destructure our id and assign it to useParams function. Next, the fin
 ```
 * Run server and see outcome.
 
-In conclusion, this document provides a comprehensive knowledge on useParams hook. We looked at the benefits of useParams hook and also the process in applying useParams hook in react applications.
+In conclusion, this document provides a comprehensive knowledge on useParams hook. We looked at the benefits of useParams hook and also the process in applying useParams hook in react applications. Hope this was useful? Why not get started and perfect your skill in React.
