@@ -13,7 +13,7 @@ The useParams hook is a React router hook that enables navigating and dynamic re
 ## **Steps in applying useParams hook in React applications.**
 In this section, we shall be building a simple ecommerce page that display products, whereby each product details will be retrieve and render. Let’s get started.
 ### **Assumption**
-This section will assume that you have setup your react app with necessary routings. If you have not, check out this [**Link**](https://medium.com/@nehemiahdauda60/routing-in-react-applications-96340f2b07d5.) to setup your React application including installing React-router-dom. Also to note, the above link will serve as reference as we start building this app.
+This section will assume that you have setup your react app with necessary routings. If you have not, check out this [**Link**](https://medium.com/@nehemiahdauda60/routing-in-react-applications-96340f2b07d5) to setup your React application including installing React-router-dom. Also to note, the above link will serve as reference as we start building this app.
 
 Firstly, lets creates an image folder in src directory. Insert all necessary images needed for the project.
 * Creates route in App.js file for our pages.
@@ -80,7 +80,7 @@ const Card = () => {
 export default Card;
 ```
 In the above codes, map function was used to iterates through products which was imported from Products.js file. We also destruture our products object and save it to store. Note also we have a Link element that points to a url using backtick ( **`** ) and template literals ( **${}** ).
-* In Home.js file in pages folder, import and render Card.js as seen in the codes below. (reference from [**React routing tutorial**](/https://medium.com/@nehemiahdauda60/routing-in-react-applications-96340f2b07d5.) )
+* In Home.js file in pages folder, import and render Card.js as seen in the codes below. (reference from [**React routing tutorial**](https://medium.com/@nehemiahdauda60/routing-in-react-applications-96340f2b07d5) )
 ```
 import Card from "../components/Card"
 
